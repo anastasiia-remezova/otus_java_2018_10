@@ -64,9 +64,10 @@
                 <configuration>
                     <proguardVersion>6.0.3</proguardVersion>
                     <obfuscate>true</obfuscate>
-                    <injar>${project.build.finalName}.jar</injar>
+                    <injar>${project.build.finalName}-jar-with-dependencies.jar</injar>
                     <outputDirectory>${project.build.directory}</outputDirectory>
                     <options>
+                        <option>-dontwarn</option>
                         <option>-keep class ru.otus.Main</option>
                     </options>
                     <libs>
